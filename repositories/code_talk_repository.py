@@ -24,4 +24,3 @@ class CodeTalkRepository:
     @classmethod
     def find_by_code(cls, code):
         return db.session.query(code_talk).filter(code_talk.c.code_id == code).first()
-
