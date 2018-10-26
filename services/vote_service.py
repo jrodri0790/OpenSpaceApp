@@ -19,6 +19,6 @@ class VoteService:
         for name, votes in voted_talks:
             text_voted_talks += name
             text_voted_talks += space
-            text_voted_talks += votes
+            text_voted_talks += str(votes)
             text_voted_talks += break_line
         return text_voted_talks
