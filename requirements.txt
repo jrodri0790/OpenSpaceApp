@@ -18,3 +18,4 @@ SQLAlchemy==1.2.12
 virtualenv==16.0.0
 Werkzeug==0.14.1
 SQLAlchemy-Utils==0.33.6
+Flask-Cors==3.0.6
