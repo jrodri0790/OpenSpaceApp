@@ -5,7 +5,7 @@ from flask_cors import CORS
 from flask_heroku import Heroku
 from sqlalchemy_utils import database_exists, create_database, drop_database
 
-from controllers.vote_controller import vote_blueprint
+from controllers.vote_controller import vote_blueprint, results_blueprint
 from database.database import db
 
 app = Flask(__name__)
@@ -43,3 +43,4 @@ else:
         app.logger.warning('Shiny! heroku')
 
 app.register_blueprint(vote_blueprint, url_prefix=f'/open-space')
+app.register_blueprint(results_blueprint, url_prefix=f'/open-space')

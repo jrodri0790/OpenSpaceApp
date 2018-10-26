@@ -7,11 +7,12 @@ class CodeTalkRepository:
 
     @classmethod
     def find_talks_and_votes(cls):
-        sql = text('select talk_id, count(*) as votes from code_talk group by talk_id order by votes desc')
+        sql = text('select code_talk.talk_id, talk.name, count(*) as votes from code_talk join talk on '
+                   'code_talk.talk_id = talk.id group by code_talk.talk_id, talk.name order by votes desc')
         result = db.engine.execute(sql)
         code_talks = []
         for row in result:
-            talk_vote = (row[0], row[1])
+            talk_vote = (row[1], row[2])
             code_talks.append(talk_vote)
         return code_talks
 
