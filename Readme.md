@@ -10,9 +10,22 @@ pg_dump --no-acl --no-owner -h [host ip].compute-1.amazonaws.com -U [user name] 
 
 Para correr la aplicación localmente se debe correr el script 
 
-./create_databbase
+sh create_database
+export FLASK_ENV=development
+export FLASK_APP=run.py
+
+run flask
 
 Esto creará un contenedor de docker con la base de datos y las credenciales especificadas.
+
+Si quieres entrar al contenedor, en el terminal ejecuta lo siguiente:
+
+docker exec -it id_del_container bash
+
+Una vez dentro, ejecutar:
+
+psql -U postgres
+\c mybase
 
 Luego cargar los scripts con los datos necesarios [Contactar a jorge].
 
