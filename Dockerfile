@@ -3,7 +3,7 @@ FROM python:3.7.4
 COPY . /app
 WORKDIR /app
 RUN pip3 install -r requirements.txt
-ENV FLASK_ENV=develoent
+ENV FLASK_ENV=development
 ENV FLASK_APP=run.py
 ENTRYPOINT ["python"]
 CMD ["run.py"]
