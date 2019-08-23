@@ -14,7 +14,7 @@ ENVIRONMENT_DEBUG = os.environ.get("ENV", default='development')
 if ENVIRONMENT_DEBUG == 'development':
     app.logger.debug('Entra al if de development')
     app.debug = True
-    DB_URL = 'postgresql://postgres:mysecretpassword@localhost:5432/mybase'
+    DB_URL = 'postgresql://postgres:mysecretpassword@db:5432/mybase'
     app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     with app.app_context():
