@@ -33,7 +33,7 @@ run flask
 Esto creará un contenedor de docker con la base de datos y las credenciales especificadas.
 
 Si quieres entrar al contenedor, en el terminal ejecuta lo siguiente:
-docker exec -it id_del_container bash
+docker exec -it id_del_container /bin/sh
 Una vez dentro, ejecutar:
 psql -U postgres
 \c mybase

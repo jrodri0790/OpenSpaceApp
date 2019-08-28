@@ -5,5 +5,10 @@ class TalkService:
 
     @classmethod
     def get_all_talks(cls):
-        code_talk_repository = TalkRepository()
-        return code_talk_repository.find_all()
+        talk_repository = TalkRepository()
+        return talk_repository.find_all()
+
+    @classmethod
+    def get_talk_by_id(cls, code):
+        talk_repository = TalkRepository()
+        return talk_repository.find_by_id(code)
