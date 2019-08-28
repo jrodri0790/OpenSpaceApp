@@ -1,5 +1,4 @@
 from database.database import db
-from utils.my_encoder import Serializer
 
 
 class Talk(db.Model):

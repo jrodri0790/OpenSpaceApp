@@ -1,7 +1,7 @@
 from datetime import datetime
+
 from database.database import db
 from models.talk import Talk
-from utils.my_encoder import Serializer
 
 
 class Feedback(db.Model):
